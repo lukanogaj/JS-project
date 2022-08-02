@@ -20,16 +20,20 @@ const menuArray = [
 ];
 // Create the function to be able added text into li element
 menuArray.forEach((menuArr) => {
-  const addItems = menuItems[0] + menuArray.push[0];
-  console.log(menuArr);
-  console.log(addItems);
+  menuItems.innerHTML = menuItems[0];
+  console.log(menuArray);
 });
 // Create the menu with the for loop
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 4; i++) {
   const menuItems = document.createElement('li');
   menuItems.setAttribute('id', 'menu-items');
   menuItems.classList.add('list-item');
   topMenu.appendChild(menuItems);
+  // Create the function to be able added text into li element
+  menuArray.forEach((menuArr) => {
+    menuItems.innerHTML = menuArray[i];
+  });
+  // menuItems.innerHTML = menuArray[0]; // Is working for all 5
   console.log(menuItems);
 }
 
