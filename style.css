@@ -1,5 +1,5 @@
 @import url('//use.fontawesome.com/releases/v5.15.3/css/all.css');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 *::before,
 *::after {
   margin: 0;
@@ -8,6 +8,7 @@
 }
 body {
   background-color: rgb(18, 18, 125);
+  font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -53,7 +54,7 @@ body {
 
 /* Buttons top menu */
 .gitHubBtn {
-  width: 70px;
+  width: 60px;
   height: 20px;
   background-color: #fff;
   border: none;
@@ -63,10 +64,14 @@ body {
 }
 
 .getstarted-btn {
-  height: 40px;
-  width: 140px;
+  display: block;
+  height: 43px;
+  width: 150px;
   border: 3px;
-  border-radius: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #181793;
 }
 
 .icon {
@@ -82,20 +87,110 @@ body {
   width: 90%;
   height: 100%;
   margin: auto;
-  background-color: yellow;
+  background-color: green;
 }
 
 /*  the top row with div new look like button */
 .new-span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100px;
   margin-top: 40px;
-  background-color: green;
 }
 
-.new-square {
-  width: 80px;
-  height: 40px;
-  background-color: blue;
+.new-btn {
+  display: flex;
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  padding-left: 8px;
+  margin-right: 7px;
+  background-color: #8c4bff;
+  border-radius: 5px;
   color: #fff;
+}
+
+.paragrh1 {
+  display: flex;
+  width: 190px;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  font-size: 15px;
+  color: #c0c0cf;
+}
+
+.href1 {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  color: #c092fe;
+}
+
+.href1 a {
+  display: block;
+  padding-top: 12px;
+}
+
+/* Headings with the animation divs and input */
+.head1 {
+  display: block;
+  width: 700px;
+  text-align: center;
+  margin: auto;
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  color: #fff;
+}
+
+.head2 {
+  display: block;
+  width: 780px;
+  text-align: center;
+  margin: auto;
+  padding-top: 50px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #807fb1;
+}
+
+.input-api {
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-top: 4rem;
+  width: 410px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #040a44;
+}
+
+::placeholder {
+  color: #fff;
+  letter-spacing: 0.1rem;
+  font-size: 14px;
+}
+
+/* Btns below api */
+.api-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  padding-top: 7px;
+  width: 440px;
+}
+
+.btn-demo {
+  display: block;
+  height: 43px;
+  width: 240px;
+  border: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #181793;
 }

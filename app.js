@@ -1,7 +1,6 @@
 // Creating the HTML elements , first div hero with menu and heading
 //First page before scroll
-// const gitIcon = <i class='fa-brands fa-github'></i>;
-// console.log(gitIcon);
+
 // Select the main container an  create the main divs
 const mainDiv = document.querySelector('#main-div');
 // Hero div
@@ -47,6 +46,8 @@ for (let i = 0; i < 4; i++) {
   });
 }
 
+/// Try to create the for loop for creating html elements
+
 // Create the three button git hub, get started and div for them
 // First button
 const headerBtnDiv = document.createElement('div');
@@ -69,17 +70,71 @@ startedBtn.classList.add('getstarted-btn');
 startedBtn.innerHTML = 'Get Started';
 topMenu.appendChild(startedBtn);
 
-//  The div hero
-const heroDiv = document.createElement('div');
-heroDiv.classList.add('hero');
+// Function to create all the html elements and change all js hard coding
+function createHtml(element, className, idName) {
+  const el = document.createElement(element);
+  el.classList.add(className);
+  if (idName) {
+    el.setAttribute('id', idName);
+  }
+  return el;
+}
+
+// Callin the function to create the element and add to main div
+//  The div hero with the other divs
+const heroDiv = createHtml('div', 'hero', '');
 mainDiv.appendChild(heroDiv);
-// The small heading with the span , a link learn more
-const newSpan = document.createElement('div');
-newSpan.classList.add('new-span');
+// Create the new span with
+const newSpan = createHtml('div', 'new-span');
 heroDiv.appendChild(newSpan);
-// Create the new look like button div
-const newSquare = document.createElement('div');
-newSquare.classList.add('new-square');
-newSquare.innerHTML = 'New';
-newSpan.appendChild(newSquare);
-console.log(heroDiv);
+console.log(newSpan);
+// The first line with new look button ,and link learn more 3 divs
+const newSpanBtn = createHtml('div', 'new-btn');
+const newSpanPargh = createHtml('div', 'paragrh1');
+const newSpanHrefDiv = createHtml('div', 'href1');
+const newSpanHref = createHtml('a', 'hrefLink');
+
+newSpan.appendChild(newSpanBtn);
+newSpan.appendChild(newSpanPargh);
+newSpan.appendChild(newSpanHrefDiv);
+newSpanHrefDiv.appendChild(newSpanHref);
+newSpanBtn.innerHTML = 'New';
+newSpanPargh.innerHTML = 'Strapi closes $31M Series B';
+newSpanHref.innerHTML = 'Learn more';
+
+// Create H1, H2 INPUT , two divs nested in one to be able ste them flex
+// Headings with the input
+const head1Api = createHtml('h1', 'head1');
+const head2Api = createHtml('h2', 'head2');
+const input1Api = createHtml('input', 'input-api');
+// div for 2 btn
+const apiButtons = createHtml('div', 'api-buttons');
+const btn1Api = createHtml('button', 'getstarted-btn');
+const btnDemo = createHtml('button', 'btn-demo');
+heroDiv.appendChild(head1Api);
+head1Api.innerHTML = 'Design APIs fast, manage content easily.';
+heroDiv.appendChild(head2Api);
+head2Api.innerHTML =
+  "Strapi is the leading open-source headless CMS.It's 100% JavaScript, fully customizable and developer-first.";
+heroDiv.appendChild(input1Api);
+input1Api.setAttribute(
+  'placeholder',
+  'npx create-strapi-app@latest my-project'
+);
+// BTN below main heading
+heroDiv.appendChild(apiButtons);
+apiButtons.appendChild(btn1Api);
+btn1Api.innerHTML = 'Get Started';
+apiButtons.appendChild(btnDemo);
+btnDemo.innerHTML = 'Try the live demo';
+
+//The div with 2 divs that have animation
+const animationDivs = createHtml('div', 'animation-div');
+heroDiv.appendChild(animationDivs);
+// the two divs that will be nested inside the animation div
+const animation1div = createHtml('div', 'animation-first');
+const animation2div = createHtml('div', 'animation-second');
+animationDivs.appendChild(animation1div);
+animationDivs.appendChild(animation2div);
+
+console.log();
