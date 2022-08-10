@@ -137,4 +137,6 @@ const animation2div = createHtml('div', 'animation-second');
 animationDivs.appendChild(animation1div);
 animationDivs.appendChild(animation2div);
 
-console.log();
+// Div with all the companies logos
+const companiesLogos = createHtml('div', 'logos-style');
+mainDiv.appendChild(companiesLogos);

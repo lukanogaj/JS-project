@@ -14,6 +14,7 @@ html {
 body {
   background-color: rgb(18, 18, 125);
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
@@ -222,4 +223,11 @@ body {
   padding-left: 4px;
   border: 6px #fff;
   border-radius: 5px;
+}
+
+/* Div with all logos */
+.logos-style {
+  width: 80%;
+  height: 360px;
+  background-color: yellow;
 }
