@@ -6,17 +6,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  height: 100%;
+}
+
 body {
   background-color: rgb(18, 18, 125);
   font-family: 'Poppins', sans-serif;
 }
 
 .container {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 
 /* Top menu and header css */
@@ -84,10 +90,8 @@ body {
 /*  Div hero  */
 
 .hero {
-  width: 90%;
-  height: 100%;
+  width: 63%;
   margin: auto;
-  background-color: green;
 }
 
 /*  the top row with div new look like button */
@@ -193,4 +197,29 @@ body {
   border-radius: 5px;
   font-size: 16px;
   color: #181793;
+}
+
+/* The animation divs */
+.animation-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: centre;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.animation-first {
+  width: 58%;
+  height: 500px;
+  border: solid 6px #7170b2;
+  border-radius: 7px;
+  background-color: #fff;
+}
+.animation-second {
+  width: 40%;
+  height: 510px;
+  background-color: #040a44;
+  padding-left: 4px;
+  border: 6px #fff;
+  border-radius: 5px;
 }
