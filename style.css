@@ -227,7 +227,22 @@ body {
 
 /* Div with all logos */
 .logos-style {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  margin: auto;
+  padding-top: 50px;
   width: 80%;
   height: 360px;
-  background-color: yellow;
+}
+
+.logo-img {
+  display: block;
+  width: 60px;
+  height: 50px;
+  color: #fff;
+  background-color: transparent;
+}
+
+.logo-img img {
+  color: #fff;
 }

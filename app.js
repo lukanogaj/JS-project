@@ -3,24 +3,31 @@
 
 // Select the main container an  create the main divs
 const mainDiv = document.querySelector('#main-div');
-// Hero div
-const headerDiv = document.createElement('div');
-headerDiv.classList.add('header');
+
+// Functions for the project
+function createHtml(element, className, idName) {
+  const htmlEl = document.createElement(element);
+  htmlEl.classList.add(className);
+  if (idName) {
+    htmlEl.setAttribute('id', idName);
+  }
+  return htmlEl;
+}
+
+// Top header with the menu
+const headerDiv = createHtml('div', 'header');
 mainDiv.appendChild(headerDiv);
 console.log(headerDiv);
-// Top menu
-const topMenu = document.createElement('ul'); // and add class and id
-topMenu.setAttribute('id', 'top-bar');
-topMenu.classList.add('top-menu');
+// Top menu ul list
+const topMenu = createHtml('ul', 'top-menu');
 headerDiv.appendChild(topMenu);
-const menuItems = document.createElement('li');
-menuItems.setAttribute('id', 'menu-items');
-menuItems.classList.add('list-item');
-// Create the strapi logo
-const strapiLogo = document.createElement('h2');
-strapiLogo.classList.add('strapi-logo');
+// Strapi logo
+const strapiLogo = createHtml('h2', 'strapi-logo');
 strapiLogo.innerHTML = 'strapi';
 topMenu.appendChild(strapiLogo);
+// Top menu list item
+const menuItems = createHtml('li', 'list-item');
+// topMenu.appendChild(menuItems);
 
 // Try to create the menu with the for loop and array with menu text
 const menuArray = [
@@ -29,11 +36,7 @@ const menuArray = [
   'Open-source',
   'Docs & Resources',
 ];
-// Create the function to be able added text into li element
-menuArray.forEach((menuArr) => {
-  menuItems.innerHTML = menuItems[0];
-  console.log(menuArray);
-});
+
 // Create the menu with the for loop
 for (let i = 0; i < 4; i++) {
   const menuItems = document.createElement('li');
@@ -46,44 +49,29 @@ for (let i = 0; i < 4; i++) {
   });
 }
 
-/// Try to create the for loop for creating html elements
-
 // Create the three button git hub, get started and div for them
 // First button
-const headerBtnDiv = document.createElement('div');
-headerBtnDiv.classList.add('header-btn');
+const headerBtnDiv = createHtml('div', 'header-btn');
 topMenu.appendChild(headerBtnDiv);
-const gitHubBtn1 = document.createElement('button');
-gitHubBtn1.classList.add('gitHubBtn');
+console.log(headerBtnDiv);
+// Git hub btn 1
+const gitHubBtn1 = createHtml('button', 'gitHubBtn');
 headerBtnDiv.appendChild(gitHubBtn1);
-gitHubBtn1.innerHTML = '<i class=" fa-brands fa-github"></i> star';
-// add the github icon into button
-
-//Second buttonc with numbers
-const gitHubBtn2 = document.createElement('button');
-gitHubBtn2.classList.add('gitHubBtn');
+gitHubBtn1.innerHTML = '<i class="fa-brands fa-github"></i>';
+// Git hub btn 2
+const gitHubBtn2 = createHtml('button', 'gitHubBtn');
 headerBtnDiv.appendChild(gitHubBtn2);
 gitHubBtn2.innerHTML = '298057';
-// Third button with the Get Started text
-const startedBtn = document.createElement('button');
-startedBtn.classList.add('getstarted-btn');
-startedBtn.innerHTML = 'Get Started';
+// Third button with the get started text
+const startedBtn = createHtml('button', 'getstarted-btn');
 topMenu.appendChild(startedBtn);
-
-// Function to create all the html elements and change all js hard coding
-function createHtml(element, className, idName) {
-  const el = document.createElement(element);
-  el.classList.add(className);
-  if (idName) {
-    el.setAttribute('id', idName);
-  }
-  return el;
-}
+startedBtn.innerHTML = 'Get Started';
 
 // Callin the function to create the element and add to main div
 //  The div hero with the other divs
 const heroDiv = createHtml('div', 'hero', '');
 mainDiv.appendChild(heroDiv);
+
 // Create the new span with
 const newSpan = createHtml('div', 'new-span');
 heroDiv.appendChild(newSpan);
@@ -137,6 +125,34 @@ const animation2div = createHtml('div', 'animation-second');
 animationDivs.appendChild(animation1div);
 animationDivs.appendChild(animation2div);
 
-// Div with all the companies logos
+// Div with all the companies logos and insert all the logos into html
 const companiesLogos = createHtml('div', 'logos-style');
 mainDiv.appendChild(companiesLogos);
+// const logo1 = createHtml('img', 'logo-img');
+// companiesLogos.appendChild(logo1);
+// logo1.src = './img-logos/orion.jpeg';
+// console.log(logo1);
+
+// create the for loop fo 11 logos and array with logos
+const logosList = [
+  './img-logos/orion-health.png',
+  './img-logos/toyota-logo.png',
+  './img-logos/quest-france.png',
+  './img-logos/walmart.png',
+  './img-logos/delivery-hero.png',
+  './img-logos/nasa.png',
+  './img-logos/societe-generale.png',
+  './img-logos/accenture.png',
+  './img-logos/aecom.png',
+  './img-logos/generali.png',
+  './img-logos/ibm.png',
+];
+
+for (let i = 0; i < 11; i++) {
+  const logos = createHtml('img', 'logo-img');
+  companiesLogos.appendChild(logos);
+  console.log(logos);
+  logosList.forEach(function (logoList) {
+    logos.src = logosList[i];
+  });
+}
