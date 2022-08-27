@@ -22,6 +22,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+
   width: 100vw;
   height: 100vh;
 }
@@ -227,8 +228,9 @@ body {
 
 /* Div with all logos */
 .logos-style {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  display: flex;
+  flex: wrap;
+  justify-content: space-around;
   margin: auto;
   padding-top: 50px;
   width: 80%;
@@ -240,9 +242,37 @@ body {
   width: 60px;
   height: 50px;
   color: #fff;
-  background-color: transparent;
 }
 
-.logo-img img {
+/* Ibm seperate div */
+.ibm-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.ibm {
+  display: block;
+  width: 60px;
+  height: 50px;
   color: #fff;
+}
+
+/* Wrapper div with the apps info */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: auto;
+  margin-top: 140px;
+  width: 100%;
+  background-color: #ffff;
+}
+
+.wrapper-headings {
+  display: block;
+  text-align: center;
+  width: 68%;
+  margin-top: 100px;
+  background-color: #f5f9fe;
 }

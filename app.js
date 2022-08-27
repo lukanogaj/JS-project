@@ -128,10 +128,6 @@ animationDivs.appendChild(animation2div);
 // Div with all the companies logos and insert all the logos into html
 const companiesLogos = createHtml('div', 'logos-style');
 mainDiv.appendChild(companiesLogos);
-// const logo1 = createHtml('img', 'logo-img');
-// companiesLogos.appendChild(logo1);
-// logo1.src = './img-logos/orion.jpeg';
-// console.log(logo1);
 
 // create the for loop fo 11 logos and array with logos
 const logosList = [
@@ -145,14 +141,50 @@ const logosList = [
   './img-logos/accenture.png',
   './img-logos/aecom.png',
   './img-logos/generali.png',
-  './img-logos/ibm.png',
 ];
 
-for (let i = 0; i < 11; i++) {
+for (let i = 0; i < logosList.length; i++) {
   const logos = createHtml('img', 'logo-img');
   companiesLogos.appendChild(logos);
-  console.log(logos);
   logosList.forEach(function (logoList) {
     logos.src = logosList[i];
   });
 }
+
+// Seperate div for the IBM logo
+const ibmLogo = createHtml('div', 'ibm-logo');
+mainDiv.appendChild(ibmLogo);
+const ibmLogoImg = createHtml('img', 'ibm');
+ibmLogo.appendChild(ibmLogoImg);
+ibmLogoImg.src = './img-logos/ibm.png';
+
+// Wrapper div building apps fast
+const wrapperDiv = createHtml('div', 'wrapper');
+mainDiv.appendChild(wrapperDiv);
+console.log(wrapperDiv);
+// Wrapper headings div with the headings
+const wrapperHeadings = createHtml('div', 'wrapper-headings');
+wrapperDiv.appendChild(wrapperHeadings);
+const wrapHead1 = createHtml('h5', 'wrap-h5');
+wrapHead1.innerHTML = 'TOP-FEATURES';
+wrapperHeadings.appendChild(wrapHead1);
+const wrapHead2 = createHtml('h1', 'wrap-h1');
+wrapHead2.innerHTML = 'Build apps fast.';
+wrapperHeadings.appendChild(wrapHead2);
+const wrapHead3 = createHtml('h3', 'wrap-3');
+wrapHead3.innerHTML =
+  'Buiilding self-hosted, customizable, and performant content API, has never been easier';
+wrapperHeadings.appendChild(wrapHead3);
+
+// The headings texts
+// const headWrapper = [
+//   'TOP-Features',
+//   'Build apps fast',
+//   'Buiilding self-hosted, customizable, and performant content API, has never been easier',
+// ];
+
+// For loop to create the headings for the wrapper
+// for (let i = 0; i < headWrapper.length; i++) {
+//   const headWrap = createHtml([']);
+//   console.log(headWrap);
+// }
