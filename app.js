@@ -37,17 +37,13 @@ const menuArray = [
   'Docs & Resources',
 ];
 
-// Create the menu with the for loop
-for (let i = 0; i < 4; i++) {
+menuArray.forEach((menuItem) => {
   const menuItems = document.createElement('li');
   menuItems.setAttribute('id', 'menu-items');
   menuItems.classList.add('list-item');
   topMenu.appendChild(menuItems);
-  // Create the function to be able added text into li element
-  menuArray.forEach((menuArr) => {
-    menuItems.innerHTML = menuArray[i];
-  });
-}
+  menuItems.innerHTML = menuItem;
+});
 
 // Create the three button git hub, get started and div for them
 // First button
@@ -165,26 +161,80 @@ console.log(wrapperDiv);
 // Wrapper headings div with the headings
 const wrapperHeadings = createHtml('div', 'wrapper-headings');
 wrapperDiv.appendChild(wrapperHeadings);
-const wrapHead1 = createHtml('h5', 'wrap-h5');
+const wrapHead1 = createHtml('h5', 'wrap-h1');
 wrapHead1.innerHTML = 'TOP-FEATURES';
 wrapperHeadings.appendChild(wrapHead1);
-const wrapHead2 = createHtml('h1', 'wrap-h1');
+const wrapHead2 = createHtml('h1', 'wrap-h2');
 wrapHead2.innerHTML = 'Build apps fast.';
 wrapperHeadings.appendChild(wrapHead2);
-const wrapHead3 = createHtml('h3', 'wrap-3');
+const wrapHead3 = createHtml('h3', 'wrap-h3');
 wrapHead3.innerHTML =
-  'Buiilding self-hosted, customizable, and performant content API, has never been easier';
+  'Building self-hosted, customizable, and performant content API <br> has never been easier';
 wrapperHeadings.appendChild(wrapHead3);
 
-// The headings texts
-// const headWrapper = [
-//   'TOP-Features',
-//   'Build apps fast',
-//   'Buiilding self-hosted, customizable, and performant content API, has never been easier',
-// ];
+// Wrapper divs with for loop headings and paragraphs
+//Headings text
+const wrapDivsHead = [
+  'Open Source',
+  'Customizable',
+  'Restful or GraphQL',
+  'Self-hosted',
+];
 
-// For loop to create the headings for the wrapper
-// for (let i = 0; i < headWrapper.length; i++) {
-//   const headWrap = createHtml([']);
-//   console.log(headWrap);
-// }
+const wrapDivParagraph = [
+  'Forever.The entire codebase is available on GitHub and maintained by hundreds of contributors',
+  'Easily customize the admin panel as well as the API.Extend your content managment with custom plugins, in seconds',
+  'Consume the API from any client(React, Vue, Angular), mobile apps or even Iot devices, using REST or GraphQL',
+  "Dont't give up on data privacy or lock yourself in.Keep control of your data and your costs at all time",
+];
+
+// Create div with 4 divs
+const wrapperMainDiv = createHtml('div', 'wrap-main-div');
+wrapperDiv.appendChild(wrapperMainDiv);
+
+// Adding headings and paragraphs into divs
+// wrapDivsHead.forEach((headItem) => {
+//   const wrapperDivs = createHtml('div', 'wrapper-divs');
+//   wrapperMainDiv.appendChild(wrapperDivs);
+//   const wrapDivsHead = createHtml('h3', 'wrap-main-head');
+//   wrapperDivs.appendChild(wrapDivsHead);
+//   wrapDivsHead.innerHTML = headItem;
+//   const wrapDivParagraph = createHtml('p', 'wrap-paragraph');
+//   console.log(wrapDivParagraph);
+// });
+
+const wrapArr = [
+  {
+    header: 'Open Source',
+    paragraph:
+      'Forever.The entire codebase is available on GitHub and maintained by hundreds of contributors',
+  },
+  {
+    header: 'Customizable',
+    paragraph:
+      'Easily customize the admin panel as well as the API.Extend your content managment with custom plugins, in seconds',
+  },
+  {
+    header: 'Restful or GraphQL',
+    paragraph:
+      'Consume the API from any client(React, Vue, Angular), mobile apps or even Iot devices, using REST or GraphQL',
+  },
+  {
+    header: 'Self-hosted',
+    paragraph:
+      "Dont't give up on data privacy or lock yourself in.Keep control of your data and your costs at all time",
+  },
+];
+
+wrapArr.forEach((wrapItem) => {
+  const wrapperDivs = createHtml('div', 'wrapper-divs');
+  wrapperMainDiv.appendChild(wrapperDivs);
+  const wrapperHead = createHtml('h3', 'wrap-main-head');
+  wrapperDivs.appendChild(wrapperHead);
+  const wrapDivParagraph = createHtml('p', 'wrap-paragraph');
+  wrapperDivs.appendChild(wrapDivParagraph);
+  wrapperHead.innerHTML = wrapItem.header;
+  wrapDivParagraph.innerHTML = wrapItem.paragraph;
+});
+
+console.log(wrapArr);

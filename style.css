@@ -260,6 +260,7 @@ body {
 /* Wrapper div with the apps info */
 .wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -275,4 +276,54 @@ body {
   width: 68%;
   margin-top: 100px;
   background-color: #f5f9fe;
+}
+
+/* Styling for every single heading */
+.wrap-h1 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01rem;
+  color: #00b6c8;
+  margin-top: 10rem;
+}
+
+.wrap-h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  letter-spacing: 0.02rem;
+  color: #1c1b84;
+  margin-top: 50px;
+}
+
+.wrap-h3 {
+  font-size: 22px;
+  letter-spacing: 0.06rem;
+  font-weight: 500;
+  color: #344b80;
+}
+
+/* Div with the 4 divs and headings */
+.wrap-main-div {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 68%;
+  background-color: #f5f9fe;
+}
+
+.wrapper-divs {
+  width: 100%;
+  height: 220px;
+}
+
+.wrapper-divs:nth-child(1) {
+  background-color: yellow;
+}
+.wrapper-divs:nth-child(2) {
+  background-color: red;
+}
+.wrapper-divs:nth-child(3) {
+  background-color: green;
+}
+.wrapper-divs:nth-child(4) {
+  background-color: blue;
 }
