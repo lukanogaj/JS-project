@@ -279,7 +279,7 @@ body {
 }
 
 /* Styling for every single heading */
-.wrap-h1 {
+.head-h5 {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.01rem;
@@ -287,7 +287,7 @@ body {
   margin-top: 10rem;
 }
 
-.wrap-h2 {
+.head-h1 {
   font-size: 2.8rem;
   font-weight: bold;
   letter-spacing: 0.02rem;
@@ -295,7 +295,7 @@ body {
   margin-top: 50px;
 }
 
-.wrap-h3 {
+.head-h3 {
   font-size: 22px;
   letter-spacing: 0.06rem;
   font-weight: 500;
@@ -307,23 +307,64 @@ body {
   display: grid;
   grid-template-columns: 50% 50%;
   width: 68%;
+  text-align: left;
   background-color: #f5f9fe;
 }
 
 .wrapper-divs {
   width: 100%;
   height: 220px;
+  padding-left: 220px;
 }
 
-.wrapper-divs:nth-child(1) {
-  background-color: yellow;
+/* Headings ,paragraphs in 4 divs */
+.wrap-main-head {
+  font-size: 22px;
+  letter-spacing: 0.01rem;
+  color: #1c1b84;
 }
-.wrapper-divs:nth-child(2) {
-  background-color: red;
+
+.wrap-paragraph {
+  color: #1c1b84;
+  letter-spacing: 0.08rem;
+  line-height: 1.5rem;
 }
-.wrapper-divs:nth-child(3) {
-  background-color: green;
+
+/*  Step by step div and elements */
+.step-div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  background-color: #fff;
 }
-.wrapper-divs:nth-child(4) {
-  background-color: blue;
+
+.step-div-2 {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: auto;
+}
+.stepdiv-1 {
+  width: 50%;
+  height: 400px;
+}
+
+.stepdiv-2 {
+  height: 400px;
+  width: 50%;
+  text-align: left;
+  padding-left: 27rem;
+}
+
+/*  styling the heaidngs and paragraph in stepby step */
+.stepdiv-2 .head-h5 {
+  color: #f6b73d;
+  letter-spacing: 0.05rem;
+  font-weight: 400;
+  padding-bottom: 2.8rem;
+}
+
+.stepdiv-2 .wrap-paragraph {
+  padding-top: 1rem;
 }

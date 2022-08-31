@@ -161,13 +161,13 @@ console.log(wrapperDiv);
 // Wrapper headings div with the headings
 const wrapperHeadings = createHtml('div', 'wrapper-headings');
 wrapperDiv.appendChild(wrapperHeadings);
-const wrapHead1 = createHtml('h5', 'wrap-h1');
+const wrapHead1 = createHtml('h5', 'head-h5');
 wrapHead1.innerHTML = 'TOP-FEATURES';
 wrapperHeadings.appendChild(wrapHead1);
-const wrapHead2 = createHtml('h1', 'wrap-h2');
+const wrapHead2 = createHtml('h1', 'head-h1');
 wrapHead2.innerHTML = 'Build apps fast.';
 wrapperHeadings.appendChild(wrapHead2);
-const wrapHead3 = createHtml('h3', 'wrap-h3');
+const wrapHead3 = createHtml('h3', 'head-h3');
 wrapHead3.innerHTML =
   'Building self-hosted, customizable, and performant content API <br> has never been easier';
 wrapperHeadings.appendChild(wrapHead3);
@@ -192,37 +192,26 @@ const wrapDivParagraph = [
 const wrapperMainDiv = createHtml('div', 'wrap-main-div');
 wrapperDiv.appendChild(wrapperMainDiv);
 
-// Adding headings and paragraphs into divs
-// wrapDivsHead.forEach((headItem) => {
-//   const wrapperDivs = createHtml('div', 'wrapper-divs');
-//   wrapperMainDiv.appendChild(wrapperDivs);
-//   const wrapDivsHead = createHtml('h3', 'wrap-main-head');
-//   wrapperDivs.appendChild(wrapDivsHead);
-//   wrapDivsHead.innerHTML = headItem;
-//   const wrapDivParagraph = createHtml('p', 'wrap-paragraph');
-//   console.log(wrapDivParagraph);
-// });
-
 const wrapArr = [
   {
     header: 'Open Source',
     paragraph:
-      'Forever.The entire codebase is available on GitHub and maintained by hundreds of contributors',
+      'Forever.The entire codebase is available <br> on GitHub and maintained by hundreds<br> of contributors',
   },
   {
     header: 'Customizable',
     paragraph:
-      'Easily customize the admin panel as well as the API.Extend your content managment with custom plugins, in seconds',
+      'Easily customize the admin panel as well<br> as the API.Extend your content<br> managment with custom plugins, in<br> seconds',
   },
   {
     header: 'Restful or GraphQL',
     paragraph:
-      'Consume the API from any client(React, Vue, Angular), mobile apps or even Iot devices, using REST or GraphQL',
+      'Consume the API from any client(React,<br> Vue, Angular), mobile apps or even Iot<br> devices, using REST or GraphQL',
   },
   {
     header: 'Self-hosted',
     paragraph:
-      "Dont't give up on data privacy or lock yourself in.Keep control of your data and your costs at all time",
+      "Dont't give up on data privacy or lock<br> yourself in.Keep control of your data and<br> your costs at all time",
   },
 ];
 
@@ -237,4 +226,52 @@ wrapArr.forEach((wrapItem) => {
   wrapDivParagraph.innerHTML = wrapItem.paragraph;
 });
 
-console.log(wrapArr);
+// The  content with the step by step guide
+// The divs for the step by step guidance
+const stepDiv = createHtml('div', 'step-div');
+mainDiv.appendChild(stepDiv);
+// Div for step by step heading
+const stepByStepHeadings = createHtml('div', 'stepby-headings');
+stepDiv.appendChild(stepByStepHeadings);
+
+// Try to creat the headings with the function
+
+// first head
+// const stepByStepHead1 = createHtml('h5', 'head-h5');
+// stepByStepHead1.innerHTML = 'STEP-BY-STEP';
+// stepByStepHeadings.appendChild(stepByStepHead1);
+// // second head
+// const stepByStepHead2 = createHtml('h1', 'head-h1');
+// stepByStepHead2.innerHTML = 'How does it work';
+// stepByStepHeadings.appendChild(stepByStepHead2);
+// // third head
+// const stepByStepHead3 = createHtml('h3', 'head-h3');
+// stepByStepHead3.innerHTML =
+//   'Make a flexible data structure in 2 minutes.<br> Use our powerfull features to customize your API';
+// stepByStepHeadings.appendChild(stepByStepHead3);
+
+// Step by step 2 divs
+// Div for 2 step by divs
+const stepByDivs = createHtml('div', 'step-div-2');
+stepDiv.appendChild(stepByDivs);
+// 2 divs
+const stepByDiv1 = createHtml('div', 'stepdiv-1');
+stepByDivs.appendChild(stepByDiv1);
+const stepByDiv2 = createHtml('div', 'stepdiv-2');
+stepByDivs.appendChild(stepByDiv2);
+
+// Headings and paragraph for div2
+//first head
+const div2Head1 = createHtml('h5', 'head-h5');
+div2Head1.innerHTML = 'Step 1';
+stepByDiv2.appendChild(div2Head1);
+// second head
+const div2Head2 = createHtml('h3', 'wrap-main-head');
+div2Head2.innerHTML =
+  'Effortlessly create content<br>structures that flex to your needs';
+stepByDiv2.appendChild(div2Head2);
+// Paragraph
+const div2Paragraph = createHtml('p', 'wrap-paragraph');
+div2Paragraph.innerHTML =
+  'No matter which data structure is best for<br>your buisness, you can easliy define models<br>and add realtions to create rich layout<br> expieriences.';
+stepByDiv2.appendChild(div2Paragraph);
